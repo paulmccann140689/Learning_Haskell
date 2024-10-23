@@ -1,3 +1,4 @@
+-- Pattern Matching
 -- Pattern matching allows you to decompose data structures. 
 -- It works particularly well with Algebraic Data Types (ADTs), 
 -- which provide a way to define types that can take on various forms (via sum types) 
