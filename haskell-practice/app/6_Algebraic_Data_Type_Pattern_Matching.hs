@@ -1,13 +1,12 @@
--- Pattern matching is a powerful feature in Haskell that allows you to decompose data structures easily and concisely. 
+-- Pattern matching allows you to decompose data structures. 
 -- It works particularly well with Algebraic Data Types (ADTs), 
 -- which provide a way to define types that can take on various forms (via sum types) 
 -- or combine multiple values (via product types).
 
--- When you pattern match on an ADT, you can extract values from the data structure directly in the function's arguments. 
--- This makes your code more readable and expressive, allowing you to handle different cases of a data type seamlessly.
+-- When you pattern match on an ADT, you can extract values from the data structure directly 
+-- in the function's arguments. allowing you to handle different cases of a data type seamlessly.
 
 -- Example Explanation
-
 data Suit = Hearts | Diamonds | Clubs | Spades
 data Card = King Suit | Queen Suit | Jack Suit | Ace Suit | Number Suit Int
 
@@ -26,7 +25,6 @@ showCard (Number _ n) = show n
 -- The _ wildcard is used to ignore the Suit information since it’s not needed for the string representation of Kings and Queens.
 
 
-
 -- Color Representation
 data Color = Red | Green | Blue
 
@@ -38,7 +36,6 @@ showColor Blue = "Blue"
 -- Pattern Matching: Each constructor of Color corresponds to a case in the function.
 
 
-
 -- Simple Shapes
 data Shape = Circle Float | Rectangle Float Float
 
@@ -47,7 +44,6 @@ area (Circle r) = pi * r * r
 area (Rectangle w h) = w * h
 -- Purpose: Calculates the area of different shapes.
 -- Pattern Matching: Decomposes Circle and Rectangle to extract their dimensions.
-
 
 
 -- Days of the Week
@@ -61,7 +57,6 @@ isWeekend _ = False
 -- Pattern Matching: Directly matches Saturday and Sunday to return True.
 
 
-
 -- Expression Types
 data Expr = Lit Int | Add Expr Expr | Multiply Expr Expr
 
@@ -73,7 +68,6 @@ eval (Multiply e1 e2) = eval e1 * eval e2
 -- Pattern Matching: Handles literals, addition, and multiplication.
 
 
-
 -- Traffic Lights
 data TrafficLight = Red2 | Yellow2 | Green2
 
@@ -83,7 +77,6 @@ lightAction Yellow2 = "Caution"
 lightAction Green2 = "Go"
 -- Purpose: Determines the action based on the traffic light.
 -- Pattern Matching: Each light color corresponds to a specific action.
-
 
 
 -- Student Grades
@@ -99,7 +92,6 @@ gradeMessage F = "You failed."
 -- Pattern Matching: Each grade generates a specific message.
 
 
-
 -- File System Structure
 data FileSystemItem = File String Int           -- File with name and size
                     | Directory String [FileSystemItem]  -- Directory with items
@@ -109,7 +101,6 @@ totalSize (File _ size) = size
 totalSize (Directory _ items) = sum (map totalSize items)
 -- Purpose: Calculates the total size of files within a directory.
 -- Pattern Matching: Differentiates between File and Directory to compute sizes recursively.
-
 
 
 -- Game Entities
