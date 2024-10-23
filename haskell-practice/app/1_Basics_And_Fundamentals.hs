@@ -6,7 +6,6 @@
 -- functionName: This is the name of the function or variable you are defining.
 
 -- :: (Two Colons): This operator separates the name from the type, 
--- clearly indicating that what follows is the type information.
 
 -- Type: This specifies the type of the function or variable, which could include complex types, 
 -- type constructors, or even type variables.
